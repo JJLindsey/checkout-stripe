@@ -1,8 +1,8 @@
 import React, {useContext} from 'react'
 import { CartContext } from '../CartContext'
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Container, IconButton, Typography } from '@mui/material'
-import AddCircleIcon from '@mui/icons-material/AddCircle'
-import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
+import AddBoxSharpIcon from '@mui/icons-material/AddBoxSharp'
+import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
 
 export default function ProductCard(props) {
     const product = props.product
@@ -23,10 +23,11 @@ export default function ProductCard(props) {
             <CardActions sx={{display: 'flex', justifyContent: 'center', pb: 3}}>
                 {productQuantity > 0 ?
                 <>
-                    <Typography variant='body1'>In Cart: {productQuantity}</Typography>
-                    <IconButton variant='contained' color='primary' size='small' onClick={() => cart.addOneToCart(product.id)}><AddCircleIcon /></IconButton>
-                    <IconButton variant='contained' color='primary' size='small' onClick={() => cart.removeOneFromCart(product.id)}><RemoveCircleIcon /></IconButton>
-                    {/* <Button color='error' variant='contained' onClick={() => cart.deleteFromCart(product.id)} className="my-2">Remove from cart</Button> */}
+                    <Typography variant='body1'>In Cart: </Typography>
+                    <IconButton variant='contained' color='primary' size='small' onClick={() => cart.addOneToCart(product.id)} sx={{mr:1}}><AddBoxSharpIcon /></IconButton>
+                     {productQuantity}
+                    <IconButton variant='contained' color='primary' size='small' onClick={() => cart.removeOneFromCart(product.id)}><IndeterminateCheckBoxIcon /></IconButton>
+                    {/* <Button color='error' variant='outlined' onClick={() => cart.deleteFromCart(product.id)} className="my-2">Remove from cart</Button> */}
                 </>
                 :
                 <Button onClick={() => cart.addOneToCart(product.id)} variant='outlined' color='success'>Add to Cart</Button>

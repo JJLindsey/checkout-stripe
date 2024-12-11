@@ -39,11 +39,12 @@ export default function Navigation() {
     <Box sx={{flexGrow: 1}}>
         <AppBar sx={{backgroundColor: '#fff'}}>
             {/* <Container> */}
-                <Toolbar disableGutters>
+                <Toolbar disableGutters sx={{ml: 5}}>
+                    <img src='/assets/leafLogo.png' alt='log' />
                     <Typography
-                    sx={{flexGrow: 1, ml: 5}}
+                    sx={{flexGrow: 1}}
                     color='#000'
-                    //component={Link}
+                    component={Link}
                     to='/'
                     >
                     Clean Skin Store 
@@ -66,7 +67,8 @@ export default function Navigation() {
     </Box>
     <Dialog open={open} onClose={handleClose} fullWidth sx={{minWidth: '600px'}}>
         <DialogTitle>
-            <Typography>Shopping Cart</Typography>
+            <Typography variant='h5' align='center'>YOUR CART</Typography>
+            <Typography variant='h5' align='center' sx={{backgroundColor: 'lightgreen', mt: 2}} >Welcome to Clean Skin</Typography>
         </DialogTitle>
         <IconButton
             onClick={handleClose}
@@ -77,15 +79,17 @@ export default function Navigation() {
         <DialogContent dividers>
             {productCount > 0 ?
                 <>
-                <Typography>Items in cart:</Typography>
+                <Typography variant='h6' align='center' sx={{mb: 2}}>Items in cart:</Typography>
                  {cart.items.map((currentProduct, idx) => (
                    <CartContents key={idx} id={currentProduct.id} quantity={currentProduct.quantity}></CartContents>
                 ))}
-                <Typography>Total: {cart.getCartTotal().toFixed(2)}</Typography>
-                <Button variant='contained' color='success' onClick={checkout}>Purchase Items</Button>
+                <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection:'column'}}>
+                    <Typography variant='h6' sx={{fontWeight: 'bold'}} align='center'>SUBTOTAL: ${cart.getCartTotal().toFixed(2)}</Typography>
+                    <Button variant='contained' color='success' size='large' onClick={checkout}>CHECKOUT</Button>
+                </Box>
                 </>
                 :
-                <Typography>There are no items in your cart</Typography>
+                <Typography variant='h6' align='center'>There are no items in your cart</Typography>
             }
             
         </DialogContent>
