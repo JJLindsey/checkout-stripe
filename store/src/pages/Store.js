@@ -1,14 +1,14 @@
 import React from 'react'
 
 import { productsBeauty } from '../productStore'
-import { Grid2 } from '@mui/material'
+import { Grid2, Typography } from '@mui/material'
 import ProductCard from '../components/ProductCard'
 
 function Store() {
   return (
     <>
-      <h1>Welcome to the Store</h1>
-        <Grid2 container spacing={2}>
+      <Typography align='center' variant='h2' sx={{mt: 5}}>Welcome to Clean Skin</Typography>
+        <Grid2 container spacing={3} sx={{justifyContent: 'center', mt: 8}}>
             {productsBeauty.map((product, idx) => (
             <Grid2 item size={2}>
                 <ProductCard product={product} />

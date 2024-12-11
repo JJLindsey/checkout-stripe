@@ -16,6 +16,22 @@ export default function Navigation() {
         setOpen(false)
     }
 
+    const checkout = async () => {
+        await fetch('http://localhost:4000/checkout', {
+            method: "POST",
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({items: cart.items})
+        }).then((response) => {
+            return response.json()
+        }).then((response) => {
+            if (response.url) {
+                window.location.assign(response.url)
+            }
+        })
+    }
+
     const productCount = cart.items.reduce((sum, product) => sum + product.quantity, 0)
 
   return (
@@ -27,10 +43,10 @@ export default function Navigation() {
                     <Typography
                     sx={{flexGrow: 1, ml: 5}}
                     color='#000'
-                    component={Link}
+                    //component={Link}
                     to='/'
                     >
-                        Store
+                    Clean Skin Store 
                     </Typography>
                     <Box>
                         <Button
@@ -66,7 +82,7 @@ export default function Navigation() {
                    <CartContents key={idx} id={currentProduct.id} quantity={currentProduct.quantity}></CartContents>
                 ))}
                 <Typography>Total: {cart.getCartTotal().toFixed(2)}</Typography>
-                <Button variant='contained' color='success'>Purchase Items</Button>
+                <Button variant='contained' color='success' onClick={checkout}>Purchase Items</Button>
                 </>
                 :
                 <Typography>There are no items in your cart</Typography>
