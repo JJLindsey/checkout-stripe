@@ -2,22 +2,22 @@ const productsBeauty = [
     {
         id: '1',
         title: 'Body Lotion',
-        price: '$34.00'
+        price: 34.00
     },
     {
         id: '2',
         title: 'Soap Bundle',
-        price: '$24.00'
+        price: 24.00
     },
     {
         id: '3',
         title: 'Moisturizer',
-        price: '$44.00'
+        price: 44.00
     },
     {
         id: '4',
         title: 'Serum',
-        price: '$54.00'
+        price: 54.00
     },
 ]
 

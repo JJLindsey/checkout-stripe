@@ -17,7 +17,7 @@ export default function ProductCard(props) {
             <Typography variant='h5'>
                 {product.title}
             </Typography>
-            <Typography>{product.price}</Typography>
+            <Typography>${product.price}</Typography>
         </CardContent>
         <CardActions>
             {productQuantity > 0 ?
