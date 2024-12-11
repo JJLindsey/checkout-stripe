@@ -1,4 +1,4 @@
-# Shopping Cart & Stripe Checkout
+# Shopping Cart & Stripe Payment
 
 ## **Description**
 This is a shopping cart and Stripe payment using Stripe, React, and MUI.
