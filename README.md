@@ -10,7 +10,9 @@ This is a shopping cart and Stripe payment using Stripe, React, and MUI.
 * [Features](#features)
 * [Licenses](#licenses)
 
-<img src="store/public/stripecheckout.png" alt="order status screenshot" width="300">
+<img src="store/public/stripecheckout.png" alt="stripe pay screenshot" width="250">
+
+<img src="store/public/assets/CartSkincare.png" alt="cart screenshot" width="250">
 
 ## Installation
 * clone repository
