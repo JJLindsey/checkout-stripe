@@ -24,9 +24,9 @@ export default function ProductCard(props) {
                 {productQuantity > 0 ?
                 <>
                     <Typography variant='body1'>In Cart: </Typography>
-                    <IconButton variant='contained' color='primary' size='small' onClick={() => cart.addOneToCart(product.id)} sx={{mr:1}}><AddBoxSharpIcon /></IconButton>
-                     {productQuantity}
                     <IconButton variant='contained' color='primary' size='small' onClick={() => cart.removeOneFromCart(product.id)}><IndeterminateCheckBoxIcon /></IconButton>
+                     {productQuantity}
+                    <IconButton variant='contained' color='primary' size='small' onClick={() => cart.addOneToCart(product.id)} sx={{mr:1}}><AddBoxSharpIcon /></IconButton>
                     {/* <Button color='error' variant='outlined' onClick={() => cart.deleteFromCart(product.id)} className="my-2">Remove from cart</Button> */}
                 </>
                 :
