@@ -40,12 +40,12 @@ export default function Navigation() {
         <AppBar sx={{backgroundColor: '#fff'}}>
             {/* <Container> */}
                 <Toolbar disableGutters sx={{ml: 5}}>
-                    <img src='/assets/leafLogo.png' alt='logo' />
+                    <img src='/assets/cleanSkinLogo.png' alt='logo' width='60' />
                     <Typography
                     sx={{flexGrow: 1}}
                     color='#000'
-                    component={Link}
-                    to='/'
+                    // component={Link}
+                    // to='/'
                     >
                     Clean Skin Store 
                     </Typography>
