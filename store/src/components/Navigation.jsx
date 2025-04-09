@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { CartContext } from '../CartContext'
 import { AppBar, Box, Button, Dialog, DialogContent, DialogTitle, IconButton, Toolbar, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
-import { Close } from '@mui/icons-material'
+import { Close, ShoppingCart } from '@mui/icons-material'
 import CartContents from './CartContents'
 
 export default function Navigation() {
@@ -52,11 +52,13 @@ export default function Navigation() {
                     <Box>
                         <Button
                             component={Link}
+                            startIcon={<ShoppingCart />}
                             onClick={handleOpen}
                             //to='/cart'
                             variant='contained'
+                            size='large'
                             color='success'
-                            sx={{ my: 2, mr: 8, color: 'white', display: 'block' }}
+                            sx={{ my: 2, mr: 6, color: 'white' }}
                         >
                             Cart ({productCount} Items)
                         </Button>
