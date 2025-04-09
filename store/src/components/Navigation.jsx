@@ -40,7 +40,7 @@ export default function Navigation() {
         <AppBar sx={{backgroundColor: '#fff'}}>
             {/* <Container> */}
                 <Toolbar disableGutters sx={{ml: 5}}>
-                    <img src='/assets/leafLogo.png' alt='log' />
+                    <img src='/assets/leafLogo.png' alt='logo' />
                     <Typography
                     sx={{flexGrow: 1}}
                     color='#000'
@@ -49,6 +49,28 @@ export default function Navigation() {
                     >
                     Clean Skin Store 
                     </Typography>
+                    <Box sx={{ flexGrow: 1, display: 'flex' }}>
+                        <Button
+                            component={Link}
+                            to='/'
+                            sx={{ my: 2, color: '#000', textTransform: 'none', fontWeight: 'bold' }}
+                        >
+                            HOME
+                        </Button>
+                        <Button
+                            component={Link}
+                            to='/bestseller'
+                            sx={{ my: 2, color: '#000', textTransform: 'none', fontWeight: 'bold' }}
+                        >
+                            BESTSELLERS
+                        </Button>
+                        <Button
+                            onClick={handleOpen}
+                            sx={{ my: 2, color: '#000', textTransform: 'none', fontWeight: 'bold' }}
+                        >
+                            CART
+                        </Button>
+                    </Box>
                     <Box>
                         <Button
                             component={Link}
