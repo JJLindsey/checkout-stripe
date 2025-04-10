@@ -19,8 +19,8 @@ This is a shopping cart and Stripe payment using Stripe, React, and MUI.
 * run npm i to install dependencies
 * go to Stripe to get API key
 * create .env file and add test key
-* start server - run node server.js
-* start Client app - run npm start
+* start server - node server.js
+* start Client app - npm start
 
 ## Features
 * Stripe payment for checkout

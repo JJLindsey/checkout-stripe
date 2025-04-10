@@ -1,6 +1,6 @@
 import { createContext, useState } from "react"
 
-import { productsBeauty, getProductData } from "./productStore"
+import { getProductData } from "./productStore"
 
 export const CartContext = createContext({
     items: [],
@@ -90,5 +90,3 @@ export function CartProvider({children}) {
     )
 }
 export default CartProvider
-//Context (cart, addToCart, removeCart)
-//Provider -> provides react app access to all things in your context

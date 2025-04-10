@@ -53,20 +53,20 @@ export default function Navigation() {
                         <Button
                             component={Link}
                             to='/'
-                            sx={{ my: 2, color: '#000', textTransform: 'none', fontWeight: 'bold' }}
+                            sx={{ my: 2, color: '#000', textTransform: 'success' }}
                         >
                             HOME
                         </Button>
                         <Button
                             component={Link}
                             to='/bestseller'
-                            sx={{ my: 2, color: '#000', textTransform: 'none', fontWeight: 'bold' }}
+                            sx={{ my: 2, color: '#000', textTransform: 'none' }}
                         >
                             BESTSELLERS
                         </Button>
                         <Button
                             onClick={handleOpen}
-                            sx={{ my: 2, color: '#000', textTransform: 'none', fontWeight: 'bold' }}
+                            sx={{ my: 2, color: '#000', textTransform: 'none' }}
                         >
                             CART
                         </Button>
@@ -92,7 +92,7 @@ export default function Navigation() {
     <Dialog open={open} onClose={handleClose} fullWidth sx={{minWidth: '600px'}}>
         <DialogTitle>
             <Typography variant='h5' align='center'>YOUR CART</Typography>
-            <Typography variant='h5' align='center' sx={{backgroundColor: 'lightgreen', mt: 2}} >Welcome to Clean Skin</Typography>
+            <Typography variant='h5' align='center' sx={{ mt: 2 }} >Welcome to Clean Skin</Typography>
         </DialogTitle>
         <IconButton
             onClick={handleClose}
