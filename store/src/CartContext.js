@@ -67,15 +67,6 @@ export function CartProvider({children}) {
         )
     }
 
-    // function getCartTotal() {
-    //     let totalCost = 0
-    //     cartProducts.map((cartItem) => {
-    //         const productData = getProductData(cartItem.id)
-    //         totalCost += (productData.price * cartItem.quantity)
-    //     })
-    //     return totalCost
-    // }
-
     function getCartTotal() {
         return cartProducts.reduce((total, cartItem) => {
             const productData = getProductData(cartItem.id)

@@ -50,13 +50,13 @@ export default function ProductCard(props) {
                 {productQuantity > 0 ?
                 <>
                     <Typography variant='body1'>In Cart: </Typography>
-                    <IconButton variant='contained' color='primary' size='small' onClick={() => cart.removeOneFromCart(product.id)}><IndeterminateCheckBoxIcon /></IconButton>
-                     {productQuantity}
-                    <IconButton variant='contained' color='primary' size='small' onClick={() => cart.addOneToCart(product.id)} sx={{mr:1}}><AddBoxSharpIcon /></IconButton>
+                    <IconButton variant='contained' color='success' size='small' onClick={() => cart.removeOneFromCart(product.id)}><IndeterminateCheckBoxIcon /></IconButton>
+                    {productQuantity}
+                    <IconButton variant='contained' color='success' size='small' onClick={() => cart.addOneToCart(product.id)}><AddBoxSharpIcon /></IconButton>
                     {/* <Button color='error' variant='outlined' onClick={() => cart.deleteFromCart(product.id)} className="my-2">Remove from cart</Button> */}
                 </>
                 :
-                <Button onClick={() => cart.addOneToCart(product.id)} variant='outlined' color='success'>Add to Cart</Button>
+                <Button onClick={() => cart.addOneToCart(product.id)} variant='contained' color='success'>Add to Cart</Button>
                 }
                 
             </CardActions>

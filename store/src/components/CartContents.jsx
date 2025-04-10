@@ -41,23 +41,23 @@ export default function CartContents(props) {
             <Box sx={{ display: "flex", alignItems: "center", gap: 1, my: 2 }}>
               <Button
                 variant="outlined"
-                color="primary"
                 size="small"
                 onClick={handleDecrement}
+                color='success'
               >
                 -
               </Button>
               <Typography variant="body1">{quantity}</Typography>
               <Button
                 variant="outlined"
-                color="primary"
+                color="success"
                 size="small"
                 onClick={handleIncrement}
               >
                 +
               </Button>
             </Box>
-            <Button variant='contained' onClick={() => cart.deleteFromCart(id)} sx={{mb: 2}}>Remove</Button>
+            {/* <Button variant='contained' color='success' onClick={() => cart.deleteFromCart(id)} sx={{mb: 2}}>Remove</Button> */}
             <Divider/>
         </Box>
     </>
